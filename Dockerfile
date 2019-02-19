@@ -16,7 +16,8 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 RUN yum install -y curl && \
     yum install -y epel-release && \
     yum -y install gcc, c++, make && \
-    yum curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash - && \
+    #yum curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash - && \
+    yum curl -sL https://rpm.nodesource.com/setup_10.x | -E bash - && \
     yum install -y nodejs && \
     yum clean all -y
 RUN npm install -g @angular/cli
