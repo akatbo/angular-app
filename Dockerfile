@@ -22,15 +22,17 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 
 # RUN npm install -g @angular/cli
 # RUN npm install -g @angular/cli
-#    yum update && \
+#    yum update && \ 
 #    yum clean all
 
 COPY ./s2i/bin/ /usr/local/s2i
 COPY ./etc/ /opt/app-root
 
-RUN chmod -R 755 /opt/app-root/ && ls -ltr /opt/app-root/
+#RUN chmod -R 755 /opt/app-root/ 
 
-RUN /opt/app-root/install_node.sh
+RUN chmod -R 755 /opt/app-root/ && \
+    /opt/app-root/install_node.sh && \
+    node -v && npm -v
 
 # RUN chown -R 1001:1001 /opt/app-root
 
