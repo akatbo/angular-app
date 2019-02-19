@@ -30,7 +30,7 @@ COPY ./etc/ /opt/app-root
 
 RUN chown -R 1001:1001 /opt/app-root
 
-RUN ls -ltr /opt/app-root
+RUN ls -ltr /opt/app-root/etc
 RUN /opt/app-root/install_node.sh
 
 USER 1001
