@@ -17,7 +17,7 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 #RUN yum install -y epel-release && \
 #    yum -y install gcc c++ make && \
 #    yum -y install nodejs && \
-#    yum -y update && \
+#    yum -y update && 
 #    npm install -g @angular/cli 
 
 # RUN npm install -g @angular/cli
@@ -32,7 +32,8 @@ COPY ./etc/ /opt/app-root
 
 RUN chmod -R 755 /opt/app-root/ && \
     /opt/app-root/install_node.sh && \
-    node -v && npm -v
+    node -v && npm -v && \
+    npm install -g @angular/cli
 
 # RUN chown -R 1001:1001 /opt/app-root
 
