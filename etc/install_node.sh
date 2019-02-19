@@ -21,7 +21,7 @@ echo -e ".....Installing the node and npm rpm's "
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v10.15.1/rhoar-nodejs-10.15.1-1.el7.centos.x86_64.rpm
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v10.15.1/npm-6.4.1-1.10.15.1.1.el7.centos.x86_64.rpm
 
-rpm -V $INSTALL_PKGS
+# rpm -V $INSTALL_PKGS
 yum clean all -y
 
 # Install yarn
