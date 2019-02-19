@@ -14,7 +14,9 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 
 # RUN yum install -y ... && yum clean all -y
 RUN yum install -y epel-release && \
-    yum -y install gcc, c++, make && \
+    yum -y install gcc && \
+    yum -y install c++ && \
+    yum -y install make && \
     yum install -y nodejs && \
     yum update && \
     yum clean all -y
