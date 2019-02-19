@@ -13,11 +13,8 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
       io.openshift.s2i.scripts-url=image:///usr/local/s2i
 
 # RUN yum install -y ... && yum clean all -y
-RUN yum install -y epel-release
- # && \
-#    yum -y install gcc && \
-#    yum -y install c++ && \
-#    yum -y install make && \
+RUN yum install -y epel-release && \
+    yum -y install gcc c++ make
 #    yum install -y nodejs
 #RUN npm install -g @angular/cli && \
 #    yum update && \
