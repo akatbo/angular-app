@@ -17,11 +17,11 @@ RUN yum install -y epel-release && \
     yum -y install gcc && \
     yum -y install c++ && \
     yum -y install make && \
-    yum install -y nodejs && \
+    yum install -y nodejs
+RUN npm install -g @angular/cli &&
     yum update && \
     yum clean all
-RUN npm install -g @angular/cli
-
+    
 COPY ./s2i/bin/ /usr/local/s2i
 
 RUN chown -R 1001:1001 /opt/app-root
