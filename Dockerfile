@@ -17,8 +17,7 @@ RUN yum install -y epel-release && \
     yum -y install gcc c++ make && \
     yum -y install nodejs && \
     # yum -y update && \
-    npm install -g @angular/cli && \
-    yum clean all -y
+    npm install -g @angular/cli 
 # RUN npm install -g @angular/cli
 # RUN npm install -g @angular/cli
 #    yum update && \
