@@ -11,12 +11,13 @@ ln -fs /opt/rh/rh-git29/root/usr/bin/git /usr/bin/git
 # Ensure git uses https instead of ssh for NPM install
 # See: https://github.com/npm/npm/issues/5257
 echo -e "Setting git config rules"
-git config --system url."https://github.com".insteadOf git@github.com:
-git config --global url."https://github.com".insteadOf ssh://git@github.com
-git config --system url."https://".insteadOf git://
-git config --system url."https://".insteadOf ssh://
-git config --list
+#git config --system url."https://github.com".insteadOf git@github.com:
+#git config --global url."https://github.com".insteadOf ssh://git@github.com
+#git config --system url."https://".insteadOf git://
+#git config --system url."https://".insteadOf ssh://
+#git config --list
 
+echo -e ".....Installing the node and npm rpm's "
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v10.15.1/rhoar-nodejs-10.15.1-1.el7.centos.x86_64.rpm
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v10.15.1/npm-6.4.1-1.10.15.1.1.el7.centos.x86_64.rpm
 
