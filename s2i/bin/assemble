@@ -22,15 +22,6 @@ cp -Rf /tmp/src/. ./
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
 
-ls -ltr $HOME
-
-echo "---> node -v ..."
-node -v
-
-echo "---> npn -v..."
-npn -v
-
-echo "---> ng -v..."
-ng -v
+ls -ltr 
 
 
