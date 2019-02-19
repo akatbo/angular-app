@@ -26,8 +26,8 @@ npm install
 
 ls -ltr 
 
-echo "---> Running npm run bild:prod..."
-npm build:prod
+echo "---> Running npm run build:prod..."
+npm run build:prod
 
 ls -ltr
 
