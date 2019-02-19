@@ -3,9 +3,6 @@
 # S2I assemble script for the 's2i-angular-build' image.
 # The 'assemble' script builds your application source so that it is ready to run.
 #
-# For more information refer to the documentation:
-#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
-#
 
 # If the 's2i-angular-build' assemble script is executed with the '-h' flag, print the usage.
 if [[ "$1" == "-h" ]]; then
