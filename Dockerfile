@@ -15,6 +15,8 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 COPY ./s2i/bin/ /usr/local/s2i
 COPY ./etc/ /opt/app-root
 
+RUN chmod +x -R /usr/local/s2i
+
 RUN chmod -R 755 /opt/app-root/ && \
     /opt/app-root/install_node.sh 
     
