@@ -24,10 +24,16 @@ echo "---> Building application from source..."
 echo "---> Running npm install..."
 npm install
 
-ls -ltr 
+#ls -ltr 
 
 echo "---> Running npm run build:prod..."
 npm run build:prod
 
-ls -ltr
+pwd
 
+mkdir -p /opt/app-root/deployment
+
+mv -R  /opt/app-root/src/node_modules /opt/app-root/deployment
+mv -R  /opt/app-root/src/dist/ /opt/app-root/deployment
+
+ls -ltr /opt/app-root/deployment
