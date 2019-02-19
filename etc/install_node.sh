@@ -32,6 +32,9 @@ if [ ! -h /usr/bin/npx ] ; then
   ln -s /usr/lib/node_modules/npm/bin/npx-cli.js /usr/bin/npx
 fi
 
+echo -e ".....Installing angular cli "
+npm install -g @angular/cli
+
 echo "---> Setting directory write permissions"
 fix-permissions /opt/app-root
 

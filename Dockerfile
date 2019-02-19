@@ -32,8 +32,8 @@ COPY ./etc/ /opt/app-root
 
 RUN chmod -R 755 /opt/app-root/ && \
     /opt/app-root/install_node.sh && \
-    node -v && npm -v && \
-    npm install -g @angular/cli
+    node -v && npm -v && ng -v
+    
 
 # RUN chown -R 1001:1001 /opt/app-root
 
