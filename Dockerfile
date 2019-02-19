@@ -28,10 +28,11 @@ LABEL io.k8s.description="Platform for building Modern Web Applications that use
 COPY ./s2i/bin/ /usr/local/s2i
 COPY ./etc/ /opt/app-root
 
-RUN chown -R 1001:1001 /opt/app-root
+RUN chmod -R 755 /opt/app-root/ && ls -ltr /opt/app-root/
 
-RUN ls -ltr /opt/app-root/etc
 RUN /opt/app-root/install_node.sh
+
+# RUN chown -R 1001:1001 /opt/app-root
 
 USER 1001
 
