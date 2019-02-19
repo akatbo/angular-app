@@ -19,7 +19,7 @@ RUN yum install -y epel-release && \
     yum -y install make && \
     yum install -y nodejs && \
     yum update && \
-    yum clean all -y
+    yum clean all
 RUN npm install -g @angular/cli
 
 COPY ./s2i/bin/ /usr/local/s2i
