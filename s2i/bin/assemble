@@ -34,6 +34,6 @@ pwd
 mkdir -p /opt/app-root/deployment
 
 cp -r  /opt/app-root/src/node_modules /opt/app-root/deployment
-cp -r  /opt/app-root/src/dist/ /opt/app-root/deployment
+cp -r  /opt/app-root/src/dist/* /opt/app-root/deployment
 
 ls -ltr /opt/app-root/deployment
